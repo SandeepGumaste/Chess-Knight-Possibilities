@@ -1,0 +1,23 @@
+.blackTile {
+  display: grid;
+  place-items: center;
+  background: rgb(70, 70, 70);
+}
+.whiteTile {
+  display: grid;
+  place-items: center;
+  background: rgb(201, 201, 201);
+}
+.image {
+  height: 75%;
+}
+
+.possibleMove {
+  animation: blink 2s infinite linear;
+}
+
+@keyframes blink {
+  50% {
+    border: 3px solid yellow;
+  }
+}
