@@ -7,7 +7,11 @@
 - All possible moves will be indicated on the board with a blinking yellow border.
 - You can change the position of knight by directly clicking on the tile, if it is displayed as a possible move.
 
-## Run this program using command line
+## Run this app online
+
+Open [https://chess-knight.netlify.app/](https://chess-knight.netlify.app/) in a new browser tab.
+
+## Run this app using command line
 
 To run this program using command line, you'll have to create an alias.
 
