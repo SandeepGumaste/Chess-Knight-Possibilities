@@ -20,6 +20,6 @@ To run this program using command line, you'll have to create an alias.
 
 3. To create a temporary alias, run the following command
    `alias knight='cd YOUR_REPO_PATH && npm run start'`  
-   Paste the path of the clone of this repo on your system in plae of YOUR_REPO_PATH in the above command.
+   Paste the path of the clone of this repo on your system in place of YOUR_REPO_PATH in the above command.
 
 - To create a permanent alias, you'll have to edit your .bashrc file and add the above command to it.
