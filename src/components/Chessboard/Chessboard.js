@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Instructions from "../Instructions/Instructions";
 import Tile from "../Tile/Tile";
 import styles from "./Chessboard.module.css";
 
@@ -9,7 +10,6 @@ const rooks = ["a1", "h1"];
 const bishops = ["c1", "f1"];
 const queens = ["d1"];
 const kings = ["e1"];
-const knights = ["b1", "g1"];
 const unavailable = [...pawns, ...rooks, ...bishops, ...queens, ...kings];
 
 const Chessboard = () => {
@@ -20,8 +20,9 @@ const Chessboard = () => {
   ]);
   const [moves, setMoves] = useState([]);
   const [changePos, setChangePos] = useState(false);
+  const [showRules, setShowRules] = useState(false);
 
-  const chessmen = { pawns, rooks, bishops, queens, kings, knights };
+  const chessmen = { pawns, rooks, bishops, queens, kings };
 
   const board = [];
 
@@ -63,19 +64,33 @@ const Chessboard = () => {
       );
     }
   }
-  return (
-    <div className={styles.main}>
-      <div className={styles.board}>{board}</div>
-      <div className={styles.boardContent}>
-        <div>
-          <p>Current Position: {knightPos}</p>
-          <p>Possible moves: {moves.sort().join(", ")}</p>
-        </div>
+  return !showRules ? (
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <h1>Knight</h1>
+        <button className={styles.button} onClick={() => setShowRules(true)}>
+          Instructions
+        </button>
       </div>
-      <button className={styles.button} onClick={() => setChangePos(true)}>
-        {`${changePos ? "Setting" : "Set"} Knight position`}
-      </button>
+      <div className={styles.main}>
+        <div className={styles.boardContent}>
+          <div>
+            <p>Current Position: {knightPos}</p>
+            <p>Possible moves: {moves.sort().join(", ")}</p>
+          </div>
+          <button
+            className={styles.button}
+            onClick={() => setChangePos(true)}
+            disabled={changePos}
+          >
+            {`${changePos ? "Setting" : "Set"} Knight position`}
+          </button>
+        </div>
+        <div className={styles.board}>{board}</div>
+      </div>
     </div>
+  ) : (
+    <Instructions setShowRules={setShowRules} />
   );
 };
 

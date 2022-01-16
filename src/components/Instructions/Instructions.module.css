@@ -1,0 +1,14 @@
+.instructions {
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border: 5px solid rgb(51, 51, 51);
+  margin: 0 10px;
+}
+
+.instructionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}

@@ -40,22 +40,22 @@ const Tile = ({
         onClick={() => setPos(posName)}
       >
         {knightPos === posName && (
-          <img src={knight} className={styles.image} alt="black" />
+          <img src={knight} className={styles.image} alt="knight" />
         )}
         {pawns.includes(posName) && (
-          <img className={styles.image} src={pawn} alt="white pawn" />
+          <img className={styles.image} src={pawn} alt="pawn" />
         )}
         {bishops.includes(posName) && (
-          <img className={styles.image} src={bishop} alt="white pawn" />
+          <img className={styles.image} src={bishop} alt="bishop" />
         )}
         {rooks.includes(posName) && (
-          <img className={styles.image} src={rook} alt="white pawn" />
+          <img className={styles.image} src={rook} alt="rook" />
         )}
         {kings.includes(posName) && (
-          <img className={styles.image} src={king} alt="white pawn" />
+          <img className={styles.image} src={king} alt="king" />
         )}
         {queens.includes(posName) && (
-          <img className={styles.image} src={queen} alt="white pawn" />
+          <img className={styles.image} src={queen} alt="queen" />
         )}
       </div>
     );
@@ -69,22 +69,22 @@ const Tile = ({
       onClick={() => setPos(posName)}
     >
       {knightPos === posName && (
-        <img src={knight} className={styles.image} alt="white knight" />
+        <img src={knight} className={styles.image} alt="knight" />
       )}
       {pawns.includes(posName) && (
-        <img className={styles.image} src={pawn} alt="white pawn" />
+        <img className={styles.image} src={pawn} alt="pawn" />
       )}
       {bishops.includes(posName) && (
-        <img className={styles.image} src={bishop} alt="white pawn" />
+        <img className={styles.image} src={bishop} alt="bishop" />
       )}
       {rooks.includes(posName) && (
-        <img className={styles.image} src={rook} alt="white pawn" />
+        <img className={styles.image} src={rook} alt="rook" />
       )}
       {kings.includes(posName) && (
-        <img className={styles.image} src={king} alt="white pawn" />
+        <img className={styles.image} src={king} alt="king" />
       )}
       {queens.includes(posName) && (
-        <img className={styles.image} src={queen} alt="white pawn" />
+        <img className={styles.image} src={queen} alt="queen" />
       )}
     </div>
   );
